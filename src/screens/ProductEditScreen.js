@@ -34,7 +34,7 @@ function ProductEditScreen({ match, history }) {
 
         if (successUpdate) {
             dispatch({ type: PRODUCT_UPDATE_RESET })
-            history.push('/admin/productlist')
+            history.push('https://ashrayshiva.pythonanywhere.com/admin/productlist')
         } else { 
         if (!product.name || product._id !== Number(productId)) {
             dispatch(listProductDetails(productId))
@@ -81,7 +81,7 @@ function ProductEditScreen({ match, history }) {
                 }
             }
 
-            const { data } = await axios.post('/api/products/upload/', formData, config)
+            const { data } = await axios.post('https://ashrayshiva.pythonanywhere.com/api/products/upload/', formData, config)
 
 
             setImage(data)
@@ -94,7 +94,7 @@ function ProductEditScreen({ match, history }) {
         
     return (
         <div>
-            <Link to='/admin/productlist'>
+            <Link to='https://ashrayshiva.pythonanywhere.com/admin/productlist'>
                 Go Back
             </Link>
 
