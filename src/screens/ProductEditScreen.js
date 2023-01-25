@@ -81,7 +81,7 @@ function ProductEditScreen({ match, history }) {
                 }
             }
 
-            const { data } = await axios.post('https://ashrayshiva.pythonanywhere.com/api/products/upload/', formData, config)
+            const { data } = await axios.post('/api/products/upload/', formData, config)
 
 
             setImage(data)
