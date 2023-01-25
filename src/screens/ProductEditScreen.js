@@ -34,7 +34,7 @@ function ProductEditScreen({ match, history }) {
 
         if (successUpdate) {
             dispatch({ type: PRODUCT_UPDATE_RESET })
-            history.push('https://ashrayshiva.pythonanywhere.com/admin/productlist')
+            history.push('/admin/productlist')
         } else { 
         if (!product.name || product._id !== Number(productId)) {
             dispatch(listProductDetails(productId))
@@ -94,7 +94,7 @@ function ProductEditScreen({ match, history }) {
         
     return (
         <div>
-            <Link to='https://ashrayshiva.pythonanywhere.com/admin/productlist'>
+            <Link to='/admin/productlist'>
                 Go Back
             </Link>
 
